@@ -1,0 +1,336 @@
+serverTech Sentry3-MIB Object-Id Tree
+
+-- created from sentry3 (201601251630Z)
+
+serverTech(enterprises 1718)      .1.3.6.1.4.1.1718
+|                                                 |
++--sentry3(3)                                     +- .3
+   |                                                  |
+   +--systemGroup(1)                                  +- .1
+   |  |                                               |   |
+   |  +--systemVersion(1) *                           |   +- .1 .0
+   |  |                                               |   |
+   |  +--systemNICSerialNumber(2) *                   |   +- .2 .0
+   |  |                                               |   |
+   |  +--systemLocation(3) *+                         |   +- .3 .0
+   |  |                                               |   |
+   |  +--systemTowerCount(4) *                        |   +- .4 .0
+   |  |                                               |   |
+   |  +--systemEnvMonCount(5) *                       |   +- .5 .0
+   |  |                                               |   |
+   |  +--systemTotalPower(6) *                        |   +- .6 .0
+   |  |                                               |   |
+   |  +--systemArea(7) *+                             |   +- .7 .0
+   |  |                                               |   |
+   |  +--systemWattsPerAreaUnit(8) *                  |   +- .8 .0
+   |  |                                               |   |
+   |  +--systemAreaUnit(9) *+                         |   +- .9 .0
+   |  |                                               |   |
+   |  +--systemPowerFactor(10) *+                     |   +- .10 .0
+   |  |                                               |   |
+   |  +--systemFeatures(11) *                         |   +- .11 .0
+   |  |                                               |   |
+   |  +--systemFeatureKey(12) *+                      |   +- .12 .0
+   |  |                                               |   |
+   |  +--systemOutletSeqInterval(13) *+               |   +- .13 .0
+   |  |                                               |   |
+   |  +--systemOutletRebootDelay(14) *+               |   +- .14 .0
+   |  |                                               |   |
+   |  +--systemConfigModifiedCount(15) *              |   +- .15 .0
+   |                                                  |
+   +--systemTables(2)                                 +- .2
+   |  |                                               |   |
+   |  +--towerTable(1)                                |   +- .1
+   |  |  |                                            |   |   |
+   |  |  +--towerEntry(1)                             |   |   +- .1
+   |  |     |                                         |   |       |
+   |  |     +--towerIndex(1)                          |   |       +- .1
+   |  |     |                                         |   |       |
+   |  |     +--towerID(2) *                           |   |       +- .2 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerName(3) *+                        |   |       +- .3 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerStatus(4) *                       |   |       +- .4 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerInfeedCount(5) *                  |   |       +- .5 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerProductSN(6) *                    |   |       +- .6 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerModelNumber(7) *                  |   |       +- .7 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerCapabilities(8) *                 |   |       +- .8 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerVACapacity(9) *                   |   |       +- .9 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerVACapacityUsed(10) *              |   |       +- .10 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerActivePower(11) *                 |   |       +- .11 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerApparentPower(12) *               |   |       +- .12 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerPowerFactor(13) *                 |   |       +- .13 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerEnergy(14) *                      |   |       +- .14 .<t>
+   |  |     |                                         |   |       |
+   |  |     +--towerLineFrequency(15) *               |   |       +- .15 .<t>
+   |  |                                               |   |
+   |  +--infeedTable(2)                               |   +- .2
+   |  |  |                                            |   |   |
+   |  |  +--infeedEntry(1)                            |   |   +- .1
+   |  |     |                                         |   |       |
+   |  |     +--infeedIndex(1)                         |   |       +- .1
+   |  |     |                                         |   |       |
+   |  |     +--infeedID(2) *                          |   |       +- .2 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedName(3) *+                       |   |       +- .3 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedCapabilities(4) *                |   |       +- .4 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedStatus(5) *                      |   |       +- .5 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedLoadStatus(6) *                  |   |       +- .6 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedLoadValue(7) *                   |   |       +- .7 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedLoadHighThresh(8) *+             |   |       +- .8 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedOutletCount(9) *                 |   |       +- .9 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedCapacity(10) *                   |   |       +- .10 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedVoltage(11) *                    |   |       +- .11 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedPower(12) *                      |   |       +- .12 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedApparentPower(13) *              |   |       +- .13 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedPowerFactor(14) *                |   |       +- .14 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedCrestFactor(15) *                |   |       +- .15 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedEnergy(16) *                     |   |       +- .16 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedReactance(17) *                  |   |       +- .17 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedPhaseVoltage(18) *               |   |       +- .18 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedPhaseCurrent(19) *               |   |       +- .19 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedCapacityUsed(20) *               |   |       +- .20 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedLineID(21) *                     |   |       +- .21 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedLineToLineID(22) *               |   |       +- .22 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedPhaseID(23) *                    |   |       +- .23 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedVACapacity(24) *                 |   |       +- .24 .<t> .<i>
+   |  |     |                                         |   |       |
+   |  |     +--infeedVACapacityUsed(25) *             |   |       +- .25 .<t> .<i>
+   |  |                                               |   |
+   |  +--outletTable(3)                               |   +- .3
+   |  |  |                                            |   |   |
+   |  |  +--outletEntry(1)                            |   |   +- .1
+   |  |     |                                         |   |       |
+   |  |     +--outletIndex(1)                         |   |       +- .1
+   |  |     |                                         |   |       |
+   |  |     +--outletID(2) *                          |   |       +- .2 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletName(3) *+                       |   |       +- .3 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletCapabilities(4) *                |   |       +- .4 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletStatus(5) *                      |   |       +- .5 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletLoadStatus(6) *                  |   |       +- .6 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletLoadValue(7) *                   |   |       +- .7 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletLoadLowThresh(8) *+              |   |       +- .8 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletLoadHighThresh(9) *+             |   |       +- .9 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletControlState(10) *               |   |       +- .10 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletControlAction(11) *+             |   |       +- .11 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletCapacity(12) *                   |   |       +- .12 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletVoltage(13) *                    |   |       +- .13 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletPower(14) *                      |   |       +- .14 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletApparentPower(15) *              |   |       +- .15 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletPowerFactor(16) *                |   |       +- .16 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletCrestFactor(17) *                |   |       +- .17 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletEnergy(18) *                     |   |       +- .18 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletWakeupState(19) *+               |   |       +- .19 .<t> .<i> .<o>
+   |  |     |                                         |   |       |
+   |  |     +--outletPostOnDelay(20) *+               |   |       +- .20 .<t> .<i> .<o>
+   |  |                                               |   |
+   |  +--envMonTable(4)                               |   +- .4
+   |  |  |                                            |   |   |
+   |  |  +--envMonEntry(1)                            |   |   +- .1
+   |  |     |                                         |   |       |
+   |  |     +--envMonIndex(1)                         |   |       +- .1
+   |  |     |                                         |   |       |
+   |  |     +--envMonID(2) *                          |   |       +- .2 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonName(3) *+                       |   |       +- .3 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonStatus(4) *                      |   |       +- .4 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonWaterSensorName(5) *+            |   |       +- .5 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonWaterSensorStatus(6) *           |   |       +- .6 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonADCName(7) *+                    |   |       +- .7 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonADCStatus(8) *                   |   |       +- .8 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonADCCount(9) *                    |   |       +- .9 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonADCLowThresh(10) *+              |   |       +- .10 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonADCHighThresh(11) *+             |   |       +- .11 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonTempHumidSensorCount(12) *       |   |       +- .12 .<em>
+   |  |     |                                         |   |       |
+   |  |     +--envMonContactClosureCount(13) *        |   |       +- .13 .<em>
+   |  |                                               |   |
+   |  +--tempHumidSensorTable(5)                      |   +- .5
+   |  |  |                                            |   |   |
+   |  |  +--tempHumidSensorEntry(1)                   |   |   +- .1
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorIndex(1)                |   |       +- .1
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorID(2) *                 |   |       +- .2 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorName(3) *+              |   |       +- .3 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorStatus(4) *             |   |       +- .4 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorTempStatus(5) *         |   |       +- .5 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorTempValue(6) *          |   |       +- .6 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorTempLowThresh(7) *+     |   |       +- .7 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorTempHighThresh(8) *+    |   |       +- .8 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorHumidStatus(9) *        |   |       +- .9 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorHumidValue(10) *        |   |       +- .10 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorHumidLowThresh(11) *+   |   |       +- .11 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorHumidHighThresh(12) *+  |   |       +- .12 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorTempScale(13) *+        |   |       +- .13 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorTempRecDelta(14) *+     |   |       +- .14 .<em> .<th>
+   |  |     |                                         |   |       |
+   |  |     +--tempHumidSensorHumidRecDelta(15) *+    |   |       +- .15 .<em> .<th>
+   |  |                                               |   |
+   |  +--contactClosureTable(6)                       |   +- .6
+   |  |  |                                            |   |   |
+   |  |  +--contactClosureEntry(1)                    |   |   +- .1
+   |  |     |                                         |   |       |
+   |  |     +--contactClosureIndex(1)                 |   |       +- .1
+   |  |     |                                         |   |       |
+   |  |     +--contactClosureID(2) *                  |   |       +- .2 .<em> .<cc>
+   |  |     |                                         |   |       |
+   |  |     +--contactClosureName(3) *+               |   |       +- .3 .<em> .<cc>
+   |  |     |                                         |   |       |
+   |  |     +--contactClosureStatus(4) *              |   |       +- .4 .<em> .<cc>
+   |  |                                               |   |
+   |  +--branchTable(7)                               |   +- .7
+   |     |                                            |       |
+   |     +--branchEntry(1)                            |       +- .1
+   |        |                                         |           |
+   |        +--branchIndex(1)                         |           +- .1
+   |        |                                         |           |
+   |        +--branchID(2) *                          |           +- .2 .<t> .<i> .<b>
+   |        |                                         |           |
+   |        +--branchName(3) *+                       |           +- .3 .<t> .<i> .<b>
+   |        |                                         |           |
+   |        +--branchCapabilities(4) *                |           +- .4 .<t> .<i> .<b>
+   |        |                                         |           |
+   |        +--branchStatus(5) *                      |           +- .5 .<t> .<i> .<b>
+   |        |                                         |           |
+   |        +--branchLoadStatus(6) *                  |           +- .6 .<t> .<i> .<b>
+   |        |                                         |           |
+   |        +--branchLoadValue(7) *                   |           +- .7 .<t> .<i> .<b>
+   |        |                                         |           |
+   |        +--branchLoadHighThresh(8) *+             |           +- .8 .<t> .<i> .<b>
+   |        |                                         |           |
+   |        +--branchCapacity(9) *                    |           +- .9 .<t> .<i> .<b>
+   |                                                  |
+   +--eventInformationGroup(99)                       +- .99
+   |  |                                               |   |
+   |  +--eventStatusText(1) *                         |   +- .1 .0
+   |  |                                               |   |
+   |  +--eventStatusCondition(2) *                    |   +- .2 .0
+   |                                                  |
+   +--sentry3Traps(100)                               +- .100
+      |                                                     |
+      +--events(0)                                          +- .0
+         |                                                      |
+         +--towerStatusEvent(1)                                 +- .1
+         |                                                      |
+         +--infeedStatusEvent(2)                                +- .2
+         |                                                      |
+         +--infeedLoadEvent(3)                                  +- .3
+         |                                                      |
+         +--outletStatusEvent(4)                                +- .4
+         |                                                      |
+         +--outletLoadEvent(5)                                  +- .5
+         |                                                      |
+         +--outletChangeEvent(6)                                +- .6
+         |                                                      |
+         +--envMonStatusEvent(7)                                +- .7
+         |                                                      |
+         +--envMonWaterSensorEvent(8)                           +- .8
+         |                                                      |
+         +--envMonADCEvent(9)                                   +- .9
+         |                                                      |
+         +--tempHumidSensorStatusEvent(10)                      +- .10
+         |                                                      |
+         +--tempHumidSensorTempEvent(11)                        +- .11
+         |                                                      |
+         +--tempHumidSensorHumidEvent(12)                       +- .12
+         |                                                      |
+         +--contactClosureEvent(13)                             +- .13
+         |                                                      |
+         +--branchStatusEvent(14)                               +- .14
+         |                                                      |
+         +--branchLoadEvent(15)                                 +- .15
+
+* SNMP GET requests operate on these leafs with the GET community string.
+
++ SNMP SET requests operate on these leafs with the SET community string.
+
+<t> = towerIndex, 1 to 4
+
+<i> = infeedIndex, 1 to 4
+
+<o> = outletIndex, 1 to 64
+
+<em> = envMonIndex, 1 to 4
+
+<th> = tempHumidSensorIndex, 1 to 2
+
+<cc> = contactClosureIndex, 1 to 4
+
+<b> = branchIndex, 1 to 4
+
+SET request variable bindings for outletControlAction:
+
+   0 = none
+   1 = on
+   2 = off
+   3 = reboot
